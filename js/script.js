@@ -38,3 +38,16 @@ team.forEach((socio) => {
     console.log(`Nome: ${socio.nome}, Ruolo: ${socio.ruolo}, Immagine: ${socio.immagine}`);
 });
 
+
+
+//* stampa su  stringa dom
+const container = document.getElementById('team-container');
+
+for (let index = 0; index < team.length; index++) {
+    const socio = team[index];
+    const socioDiv = document.createElement('div'); // 
+
+    socioDiv.textContent = `Nome: ${socio.nome}, Ruolo: ${socio.ruolo}, Immagine: ${socio.immagine}`;
+
+    container.appendChild(socioDiv); 
+}
